@@ -9,10 +9,12 @@ eval(File.read(File.expand_path '../colours.rb', __FILE__), b)
 
 # # initialization
 # Object.send :define_method, :reload do
-#   lights.each &on
-#   lights.each &color
-#   lights.each &red
-#   lights.each &dim # prob bright on prod day
+b.eval '
+  lights.each &on
+  lights.each &color
+  lights.each &red
+  lights.each &bright
+'
 # end
 # reload # reset is taken by pry
 
