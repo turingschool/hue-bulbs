@@ -20,13 +20,3 @@ module Hue
     end
   end
 end
-
-
-class HueTable
-  attr_accessor :lights
-  def initialize(lights)
-    self.lights = lights
-  end
-
-end
-
