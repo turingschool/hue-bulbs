@@ -1,12 +1,8 @@
 # rainbow
 lights.each_with_index { |l, i| l.hue = i * 6000 }
-sleep 3
-reload
 
 # fade in
 lights.each_with_index { |l, i| l.brightness = i * 25 }
-sleep 3
-reload
 
 # blinking
 5.times { lights.each(&pink); sleep 1; lights.each(&blue); sleep 1 }
@@ -14,8 +10,6 @@ reload
 # simple christmas lights
 evens.each(&green)
 odds.each(&red)
-sleep 3
-reload
 
 # fancy christmas lights
 t1 = Thread.new { ring.each &red; loop{ring.each &on; sleep 1; ring.each &off; sleep 1 }}
@@ -23,7 +17,6 @@ t2 = Thread.new { middle.each &green; loop{middle.each &on; sleep 1; middle.each
 sleep 5
 t1.kill
 t2.kill
-reload
 
 # fancy christmas lights 2
 5.times do
