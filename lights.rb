@@ -2,7 +2,7 @@ lights = client.lights
                .select  { |l| l.name =~ /Turing/ }
                .sort_by { |l| l.name[/\d+/].to_i }
 
-l1, l2, l3, l4, l5, l6, l7, l8, l9, l10 = lights
+l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13 = lights
 
 top    = [l2, l1, l7, l8]
 bottom = [l3, l4, l5, l6]
